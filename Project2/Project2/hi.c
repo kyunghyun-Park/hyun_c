@@ -2,5 +2,5 @@
 
 int main(void)
 {
-	printf("hi");
+	printf("한글 나와라");
 }
