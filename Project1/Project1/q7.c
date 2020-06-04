@@ -8,7 +8,7 @@ int main(int argc, char* argv[]) {
 
 	printf("1-N사이의 소수를 구합니다.N은? ");
 	scanf("%d", &n);
-	printf("소수는 모두 %d개입니다.", is_prime(n));
+	printf("\n소수는 모두 %d개입니다.", is_prime(n));
 	return 0;
 }
 
@@ -24,13 +24,12 @@ int is_prime(int x) {
 			if (count == 3) {
 				break;
 			}
-			
 		}
 		if (count == 2) {
-			count_all++;
-			
+			printf("%d ", i);
+			count_all++;	
 		}
-		
 	}
+	
 	return count_all;
 }
