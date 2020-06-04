@@ -1,14 +1,14 @@
-#define _CRT_SECURE_NO_WARNINGS
+ï»¿#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 int main(void) {
-	int num=1;
+	int num = 1;
 	//int even_count=0;
 	//int odd_count=0;
-	printf("Á¤¼ö¸¦ ºóÄ­À¸·Î ±¸ºĞÇØ¼­ ÀÔ·ÂÇÏ¼¼¿ä.(¸¶Áö¸·¿¡ 0 ÀÔ·Â)\n");
+	printf("ì •ìˆ˜ë¥¼ ë¹ˆì¹¸ìœ¼ë¡œ êµ¬ë¶„í•´ì„œ ì…ë ¥í•˜ì„¸ìš”.(ë§ˆì§€ë§‰ì— 0 ì…ë ¥)\n");
 	while (num != 0) {
 		scanf(" %d", &num);
-		
+
 		if (num == 0) {
 			printf("%d", num);
 			break;
