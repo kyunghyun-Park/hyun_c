@@ -1,4 +1,4 @@
-ï»¿#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -8,7 +8,7 @@ int main(void) {
 	char c;
 	float num1, num2;
 	while (1) {
-		printf("ìˆ˜ì‹( 0 0 0 ì…ë ¥ ì‹œ ì¢…ë£Œ)? ");
+		printf("¼ö½Ä( 0 0 0 ÀÔ·Â ½Ã Á¾·á)? ");
 		scanf("%f %c %f", &num1, &c, &num2);
 
 		switch (c)
@@ -26,7 +26,7 @@ int main(void) {
 			printf("%.6f\n", (double)num1 / num2);
 			break;
 		default:
-			printf("ë‹¤ì‹œ ì„ íƒí•˜ì„¸ìš”\n");
+			printf("´Ù½Ã ¼±ÅÃÇÏ¼¼¿ä\n");
 			break;
 			
 		}
