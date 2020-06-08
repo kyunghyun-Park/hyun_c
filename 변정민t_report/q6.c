@@ -1,32 +1,36 @@
+ï»¿#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <stdlib.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
-int main(int argc, char *argv[]) {
-	int n;
-	
-	printf("1-N»çÀÌÀÇ ¼Ò¼ö¸¦ ±¸ÇÕ´Ï´Ù.NÀº? ");
-	scanf("%d", &n);
-	printf("¼Ò¼ö´Â ¸ðµÎ %d°³ÀÔ´Ï´Ù.",is_prime(n));
+int choose_menu();
+int main(void)
+{
+	choose_menu();
 	return 0;
 }
 
-int is_prime(int x) {
-	int count=0,count_all=0;
-	for (int i;i<=x;i++){
-		
-		for(int j;j<=i;j++){
-			
-			if(j%i==0){
-				
-				count++;
-			}
-			
+int choose_menu() {
+	int menu;
+
+	while (1)
+	{
+		printf("[1.íŒŒì¼ ì—´ê¸° 2.íŒŒì¼ ì €ìž¥ 3.ì¸ì‡„ 0.ì¢…ë£Œ] ì„ íƒ? ");
+		scanf("%d", &menu);
+		switch (menu) {
+		case 1:
+			printf("íŒŒì¼ ì—´ê¸°ë¥¼ ìˆ˜í–‰í•©ë‹ˆë‹¤.\n");
+			break;
+		case 2:
+			printf("íŒŒì¼ì„ ì €ìž¥í•©ë‹ˆë‹¤.\n");
+			break;
+		case 3:
+			printf("ì¸ì‡„í•©ë‹ˆë‹¤.\n");
+			break;
+		case 0:
+			return 0;
+			break;
+		default:
+			printf("ë‹¤ì‹œ ì„ íƒí•˜ì„¸ìš”\n");
+			break;
 		}
-		if(count==2){
-			count_all++;
-		}
-	}  
-	return count_all++;
+	}
 }
