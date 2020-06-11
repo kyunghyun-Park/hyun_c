@@ -8,8 +8,8 @@ int main(void)
 	double* parr = arr;
 
 	for (int i = 0; i < 3; i++)
-	{
-		printf("arr[%d]의 주소: %d\n",i, arr+i);	}*/
+	
+		printf("arr[%d]의 주소: %p\n",i, arr+i);	*/
 	//--------------------------------------------------
 
 	//2번
@@ -18,7 +18,10 @@ int main(void)
 
 	for (int i = 0; i < 10; i++)
 	{
-		printf("%.2f  ", parr[i]);
+		//printf("%.2f  ", parr[i]);
+		printf("%.2f  ", *(parr + i));
+		//printf("%.2f  ", *parr); 세트
+		//parr++; 세트
 	}*/
 	//--------------------------------------------------
 
@@ -30,13 +33,23 @@ int main(void)
 	for (int i = 0; i < 10; i++)
 	{
 		printf("%d ", *(parr + i));
+		
 	}
 
 	printf("\n역순: ");
+
 	for (int i = 9; i >= 0; i--)
 	{
 		printf("%d ", *(parr + i));
-	}*/
+	}
+
+	//parr = &arr[9];
+	//for (int i = 0; i < 10; i++)
+	//{
+	//	printf("%d ", *parr);
+	//	parr--;
+	//}*/
+	
 	//--------------------------------------------------
 
 	//4번
@@ -51,5 +64,6 @@ int main(void)
 	}
 	average = average / 10;
 	printf("\n평균: %f", average);
+
 	return 0;
 }
