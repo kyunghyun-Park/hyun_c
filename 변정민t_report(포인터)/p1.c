@@ -2,8 +2,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int arith_seq(int* parr, int size, int com) {
+	int a = 0;
+	for (int i = 1; i < size; i++) {
+		parr[i] = parr[i - 1] + 2;
+
+	}
+	return *parr;
+}
+
 int main(void)
 {
+
+
 	int gong, num1;
 	int arr[10] = { 0 };
 	int* parr = arr;
@@ -24,11 +35,4 @@ int main(void)
 
 }
 
-int arith_seq(int *parr, int size, int com) {
-	int a = 0;
-	for (int i = 1; i <size; i++) {
-		parr[i] = parr[i-1] + 2;
 
-	}
-	return parr;
-}
