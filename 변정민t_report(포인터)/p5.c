@@ -2,15 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int arith_seq(int* parr, int size, int com) {
-	int a = 0;
-	for (int i = 1; i < size; i++) {
-		parr[i] = parr[i - 1] + 2;
-
-	}
-	return *parr;
-}
-
+int arith_seq(int*, int, int);
 int main(void)
 {
 
@@ -34,5 +26,15 @@ int main(void)
 	}
 
 }
+
+int arith_seq(int* parr, int size, int com) {
+	int a = 0;
+	for (int i = 1; i < size; i++) {
+		parr[i] = parr[i - 1] + com;
+
+	}
+	return *parr;
+}
+
 
 
