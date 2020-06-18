@@ -36,14 +36,27 @@ int strcmp_ic(char* lhs, char* rhs)
 	lhs = _strlwr(lhs);
 	rhs = _strlwr(rhs);
 
-	for (int i=0; i < SIZE; i++) {
-		if (lhs[i] == rhs[i])
-			count++;
-		else if (lhs[i] > rhs[i])
-			return 1;
-		else if (lhs[i] < rhs[i])
-			return -1;
+	//while방법
+	while (lhs[count] == rhs[count]) //문자열이 모두 같을때까지
+	{
+		if (lhs[count] == '\0' || rhs[count] == '\0') //하나라도 끝나면
+			break;
+		count++;
 	}
-	if (count == SIZE)
+
+	if (lhs[count] == '\0' && rhs[count] == '\0') //둘다 끝까지 비교했다=둘 다 같다
 		return 0;
+	else return -1;
+
+	//for방법
+	//for (int i=0; i < SIZE; i++) {
+	//	if (lhs[i] == rhs[i])
+	//		count++;
+	//	else if (lhs[i] > rhs[i])
+	//		return 1;
+	//	else if (lhs[i] < rhs[i])
+	//		return -1;
+	//}
+	//if (count == SIZE)
+	//	return 0;
 }
